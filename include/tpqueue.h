@@ -18,17 +18,16 @@ class TPQueue {
         item->next = nullptr;
         item->prev = nullptr;
         return item;
-    };
+    }
+ 
  public:
     TPQueue() {
         head = tail = current = nullptr;
     }
-  
     ~TPQueue() {
         while (head)
             pop();
     }
-  
     T getNext() {
         if (head && tail) {
             if (!current)
@@ -42,7 +41,6 @@ class TPQueue {
             throw std::string("Out of limit!");
         }
     }
-  
     T pop() {
         if (head && tail) {
             ITEM* temp = head->next;
@@ -58,7 +56,6 @@ class TPQueue {
             throw std::string("Out of limit!");
         }
     }
-    
     void push(const T& value) {
         ITEM* temp = head;
         ITEM* item = create(value);
