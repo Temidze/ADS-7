@@ -19,8 +19,8 @@ class TPQueue {
         item->prev = nullptr;
         return item;
     }
- 
-   public:
+
+ public:
     TPQueue() {
         head = tail = current = nullptr;
     }
